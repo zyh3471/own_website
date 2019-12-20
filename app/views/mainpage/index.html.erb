@@ -1,6 +1,19 @@
 <div class="headline">
     <%= link_to "Add Your Item", new_item_path %>
 </div>
-<% @item.each do |item| %>
-    <h1 class="text-center"><%= item.title %></h1>
-<% end %>
+<div class="row, text-left">
+    <% @item.each do |item| %>
+        <div class="text-center">
+            <div class="tt">
+                <%= item.title %>
+            </div>
+                <%= item.status %>
+                
+                <%= item.description %>
+                <%= item.market_price %>
+                <%= item.used_price %>
+                <br/>
+                <br/>
+        </div>
+    <% end %>
+</div>
